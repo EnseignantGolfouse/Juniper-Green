@@ -1,0 +1,125 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://TileMap.gd" type="Script" id=1]
+[ext_resource path="res://assets/Juniper Green - Green.png" type="Texture" id=2]
+[ext_resource path="res://assets/Juniper Green - Orange.png" type="Texture" id=3]
+[ext_resource path="res://assets/Juniper Green.png" type="Texture" id=4]
+[ext_resource path="res://Main.gd" type="Script" id=5]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Juniper Green.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 55, 60, 590, 592 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 118, 148 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Juniper Green - Green.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 55, 60, 590, 592 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 118, 148 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Juniper Green - Orange.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 55, 60, 590, 592 )
+2/tile_mode = 2
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 118, 148 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/UbuntuMono_Nerd_Font_Regular.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://assets/UbuntuMono_Nerd_Font_Regular.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = SubResource( 4 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 118, 148 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 1, 2, 0, 2, 3, 0, 3, 4, 0, 4, 65536, 0, 65536, 65537, 0, 65537, 65538, 0, 65538, 65539, 0, 65539, 65540, 0, 65540, 131072, 0, 131072, 131073, 0, 131073, 131074, 0, 131074, 131075, 0, 131075, 131076, 0, 131076, 196608, 0, 196608, 196609, 0, 196609, 196610, 0, 196610, 196611, 0, 196611, 196612, 0, 196612 )
+script = ExtResource( 1 )
+
+[node name="Texte" type="RichTextLabel" parent="."]
+margin_left = 602.757
+margin_top = 2.62158
+margin_right = 1023.76
+margin_bottom = 371.622
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Règles :
+- À chaque tour, il faut dire un nombre qui n'a pas encore été choisi.
+- Le nombre doit être un multiple ou diviseur du nombre précédent.
+- La partie s'arrête lorsqu'on ne peut plus jouer de coup."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Erreurs" type="RichTextLabel" parent="."]
+margin_left = 598.881
+margin_top = 398.07
+margin_right = 1019.88
+margin_bottom = 545.07
+custom_fonts/normal_font = SubResource( 5 )
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
